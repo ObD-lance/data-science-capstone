@@ -1,3 +1,5 @@
-# IBM Data Science Professional | Capstone cert.
+# Falcon 9 landing success predictor 
 
-Building ML models and training pipelines to predict the first-stage success rate of SpaceX Falcon 9 rocket.
+Model accuracy among popular machine learning algorithms to predict first-stage landing success of the SpaceX Falcon 9 rocket.
+
+### IBM DS professional certification | Course 10 of 10
