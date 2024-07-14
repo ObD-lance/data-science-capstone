@@ -1,3 +1,6 @@
 .ipynb_checkpoints/
 plots/~$LancePeterson-ds-capstone-slides.pptx
 *.pptx
+*.pdf
+*.png
+data/

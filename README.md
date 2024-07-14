@@ -1,5 +1,5 @@
-# Falcon 9 landing success predictor 
+# Applied Data Science Capstone
 
-Model accuracy among popular machine learning algorithms to predict first-stage landing success of the SpaceX Falcon 9 rocket.
+Predicting SpaceX Falcon 9 first-stage landing success using machine learning pipelines and hyperparameter optimization.
 
-### IBM DS professional certification | Course 10 of 10
+### IBM Data Science Professional Certification
