@@ -25,7 +25,8 @@ def plot_confusion_matrix(y, y_predict):
 data = pd.read_csv("dataset_part_2.csv")
 X = pd.read_csv("dataset_part_3.csv")
 
-# TASK 1: Create a NumPy array from the Class column
+# Create a NumPy array from the column Class in data, by applying the method to_numpy()
+# then assign it  to the variable Y, make sure the output is a Pandas series (only one bracket df['name of  column']).
 Y = data['Class'].to_numpy()
 
 # TASK 2: Standardize the data in X
@@ -34,6 +35,8 @@ X = transform.fit_transform(X)
 
 # TASK 3: Split the data into training and test sets
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=2)
+
+print(Y_test.shape)
 
 # TASK 4: Create and train Logistic Regression model
 parameters = {'C': [0.01, 0.1, 1], 'penalty': ['l2'], 'solver': ['lbfgs']}
@@ -71,6 +74,9 @@ print("SVM Test Accuracy:", svm_accuracy)
 yhat = svm_cv.predict(X_test)
 plot_confusion_matrix(Y_test, yhat)
 
+
+
+
 # TASK 8: Create and train Decision Tree model
 parameters = {'criterion': ['gini', 'entropy'],
               'splitter': ['best', 'random'],
@@ -78,7 +84,7 @@ parameters = {'criterion': ['gini', 'entropy'],
               'max_features': ['auto', 'sqrt'],
               'min_samples_leaf': [1, 2, 4],
               'min_samples_split': [2, 5, 10]}
-tree = DecisionTreeClassifier(random_state=2, )
+tree = DecisionTreeClassifier()
 tree_cv = GridSearchCV(tree, parameters, cv=10)
 tree_cv.fit(X_train, Y_train)
 
@@ -92,6 +98,9 @@ print("Decision Tree Test Accuracy:", tree_accuracy)
 # Plot confusion matrix for Decision Tree
 yhat = tree_cv.predict(X_test)
 plot_confusion_matrix(Y_test, yhat)
+
+
+
 
 # TASK 10: Create and train K-Nearest Neighbors model
 parameters = {'n_neighbors': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
