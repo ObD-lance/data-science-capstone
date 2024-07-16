@@ -10,7 +10,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
 
-# Function to plot confusion matrix
 def plot_confusion_matrix(y, y_predict):
     cm = confusion_matrix(y, y_predict)
     ax = plt.subplot()
@@ -21,7 +20,6 @@ def plot_confusion_matrix(y, y_predict):
     ax.xaxis.set_ticklabels(['did not land', 'land']); ax.yaxis.set_ticklabels(['did not land', 'landed'])
     plt.show()
 
-# Load the data
 data = pd.read_csv("dataset_part_2.csv")
 X = pd.read_csv("dataset_part_3.csv")
 
