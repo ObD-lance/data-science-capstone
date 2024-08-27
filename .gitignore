@@ -1,8 +1,2 @@
-.ipynb_checkpoints/
-data/
-plots/
-res/
-*.pyc
-*.pdf
-*.png
-*.pptx
+*.DS_STORE
+__pycache__/
